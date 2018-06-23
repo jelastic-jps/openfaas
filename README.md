@@ -1,6 +1,6 @@
 ![OpenFaaS Logo](/images/openfaas-logo.png) 
 
-# OpenFaas (Functions-as-a-Service) - Serverless Functions Made Simple
+# OpenFaas (Functions-as-a-Service) - Serverless Functions
 
 
 It's very easy to get started - the default demo of [Docker Swarm Cluster](https://github.com/jelastic-jps/docker-native/tree/master/docker-swarm) deploys OpenFaaS cluster. Just choose __Deploy Stack YML__ in the installation wizard.    
