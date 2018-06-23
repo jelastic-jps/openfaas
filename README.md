@@ -7,11 +7,13 @@ It's very easy to get started - the default demo of [Docker Swarm Cluster](https
 
 ![OpenFaaS Install](/images/openfaas-installation.png) 
 
-After the completion press __Open in Browser__ button.
+After the completion press __Open in Browser__ button. Default port is __:8080__.  
 
 ![OpenFaaS UI](/images/openfaas-ui.png) 
 
 ## Deploy Now
+
+Press __Deploy__ to get an account and deploy to a certified Jelastic partner from the distributed network of independent data center service providers. 
 
 [![Deploy](https://github.com/jelastic-jps/git-push-deploy/raw/master/images/deploy-to-jelastic.png)](https://jelastic.com/install-application/?manifest=https://raw.githubusercontent.com/siruslan/docker-native/master/docker-swarm/manifest.jps) 
 
