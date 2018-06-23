@@ -1,2 +1,2 @@
-# openfaas
+# OpenFaas
 Functions-as-a-Service (FaaS) - Serverless Functions Made Simple
