@@ -17,6 +17,8 @@ Press __Deploy__ to get an account and deploy to a certified Jelastic partner fr
 
 [![Deploy](https://github.com/jelastic-jps/git-push-deploy/raw/master/images/deploy-to-jelastic.png)](https://jelastic.com/install-application/?manifest=https://raw.githubusercontent.com/jelastic-jps/openfaas/master/manifest.jps) 
 
+**Note**: The package is compatible with Jelastic 5.4 build 8+. 
+
 ## OpenFaaS Managed Hosting Business
 
 To start offering this solution to your customers please follow to [Managed PaaS Hosting Business](https://jelastic.com/apaas/)
