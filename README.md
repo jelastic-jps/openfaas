@@ -3,9 +3,9 @@
 # OpenFaas (Functions-as-a-Service) - Serverless Functions
 
 
-It's very easy to get started - the default demo of [Docker Swarm Cluster](https://github.com/jelastic-jps/docker-native/tree/master/docker-swarm) deploys OpenFaaS cluster. Just choose __Deploy Stack YML__ in the installation wizard.    
+It's very easy to get started. Just press __Install__ in the installation wizard.    
 
-![OpenFaaS Install](/images/openfaas-installation.png) 
+![OpenFaaS Install](/images/openfaas-installation-wizard.png) 
 
 After the completion press __Open in Browser__ button. Default port is __:8080__.  
 
@@ -15,7 +15,7 @@ After the completion press __Open in Browser__ button. Default port is __:8080__
 
 Press __Deploy__ to get an account and deploy to a certified Jelastic partner from the distributed network of independent data center service providers. 
 
-[![Deploy](https://github.com/jelastic-jps/git-push-deploy/raw/master/images/deploy-to-jelastic.png)](https://jelastic.com/install-application/?manifest=https://raw.githubusercontent.com/siruslan/docker-native/master/docker-swarm/manifest.jps) 
+[![Deploy](https://github.com/jelastic-jps/git-push-deploy/raw/master/images/deploy-to-jelastic.png)](https://jelastic.com/install-application/?manifest=https://raw.githubusercontent.com/jelastic-jps/openfaas/master/manifest.jps) 
 
 ## OpenFaaS Managed Hosting Business
 
