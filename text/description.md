@@ -1,0 +1,1 @@
+**OpenFaas** (Functions-as-a-Service) - is a framework for building Serverless Functions. Any process can be packaged as a function enabling you to consume a range of web events without repetitive boiler-plate coding.
