@@ -1,3 +1,3 @@
-**UI Portal**: [http://${settings.envName}](http://${settings.envName})  
+**UI Portal**: [${globals.startPage}](${globals.startPage})  
 **User**: ${globals.user}  
 **Password**: ${globals.password}
