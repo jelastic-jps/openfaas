@@ -1,0 +1,64 @@
+---
+type: install
+version: 1.5.2
+id: open-faas
+baseUrl: https://github.com/jelastic-jps/openfaas/blob/master
+description:
+  text: /text/description.md
+  short: Docker Swarm Cluster with out-of-box auto-clustering and auto-scaling
+categories:
+  - apps/clusters
+  - apps/dev-and-admin-tools
+logo: /images/openfaas-logo.png
+name: OpenFaaS
+targetRegions:
+  type: vz7
+  
+globals: 
+  user: openfaas-${fn.random(1000)}
+  password: ${fn.password(20)}
+
+settings:
+  fields:
+    - caption: Env Name  
+      type: envname
+      name: envName
+      dependsOn: region
+      randomName: true
+      showFullDomain: true
+      required: true
+
+    - caption: Region
+      type: regionlist
+      name: region
+      disableInactive: true
+      selectFirstAvailable: true
+      filter:
+        type: ["vz7"]
+        isActive: true
+ 
+onInstall:
+  # gettting envGroups via script - temporary workaround while placeholder envGroups is not implemented  
+  - script: return {result:0, envGroups:eval('(' + MANIFEST + ')').envGroups}
+  - install: 
+      jps: https://raw.githubusercontent.com/siruslan/docker-native/master/docker-swarm/manifest.jps
+      envName: ${settings.envName}
+      envGroups: ${response.envGroups}
+      region: ${settings.region}
+      settings:
+        mngr: 1
+        worker: 1
+        autoscaling: true
+        stack: deploy
+        yml: https://github.com/jelastic/faas/blob/master/docker-compose.yml
+        stackName: func
+        preHook: |-
+          printf '${globals.user}' | docker secret create basic-auth-user -
+          printf '${globals.password}' | docker secret create basic-auth-password -
+  - env.control.GetEnvInfo:
+    envName: ${settings.envName}
+  - setGlobals:
+      startPage: http://${response.env.domain}:8080/
+
+startPage: ${globals.startPage}
+success: /text/success.md
