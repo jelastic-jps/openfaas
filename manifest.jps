@@ -41,7 +41,7 @@ onInstall:
   # gettting envGroups via script - temporary workaround while placeholder envGroups is not implemented  
   - script: return {result:0, envGroups:eval('(' + MANIFEST + ')').envGroups}
   - install: 
-      jps: https://raw.githubusercontent.com/siruslan/docker-native/master/docker-swarm/manifest.jps
+      jps: https://raw.githubusercontent.com/jelastic-jps/docker-native/master/docker-swarm/manifest.jps
       envName: ${settings.envName}
       envGroups: ${response.envGroups}
       region: ${settings.region}
