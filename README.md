@@ -1,7 +1,6 @@
 ![OpenFaaS Logo](./images/openfaas-logo.png) 
 
-# OpenFaas (Functions-as-a-Service) -
-# Serverless Functions
+# OpenFaas (Functions-as-a-Service) - Serverless Functions
 
 Import the required manifest using the link from GitHub:
 [https://github.com/jelastic-jps/openfaas/blob/master/manifest.jps](https://github.com/jelastic-jps/openfaas/blob/master/manifest.jps)
