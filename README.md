@@ -1,15 +1,27 @@
-![OpenFaaS Logo](/images/openfaas-logo.png) 
+![OpenFaaS Logo](./images/openfaas-logo.png) 
 
-# OpenFaas (Functions-as-a-Service) - Serverless Functions
+# OpenFaas (Functions-as-a-Service) -
+# Serverless Functions
+
+Import the required manifest using the link from GitHub:
+[https://github.com/jelastic-jps/openfaas/blob/master/manifest.jps](https://github.com/jelastic-jps/openfaas/blob/master/manifest.jps)
 
 
-It's very easy to get started. Just press __Install__ in the installation wizard.    
+<p align="left"> 
+<img src="./images/import.png" width="500">
+</p>
 
-![OpenFaaS Install](/images/openfaas-installation-wizard.png) 
+In the installation wizard, if required, change settings such as *Environment Name* or *Region*. Then press __Install__ .
 
-After the completion press __Open in Browser__ button. Default port is __:8080__.  
+<p align="left"> 
+<img src="./images/openfaas-installation-wizard.png" width="500">
+</p>
 
-![OpenFaaS UI](/images/openfaas-ui.png) 
+After the completion press __Open in Browser__ button. The default port is __:8080__.  
+
+<p align="left"> 
+<img src="./images/openfaas-ui.png" width="500">
+</p>
 
 ## Deploy Now
 
@@ -21,4 +33,4 @@ Press __Deploy__ to get an account and deploy to a certified Jelastic partner fr
 
 ## OpenFaaS Managed Hosting Business
 
-To start offering this solution to your customers please follow to [Managed PaaS Hosting Business](https://jelastic.com/apaas/)
+To start offering this solution to your customers please follow to [Managed PaaS Hosting Business](https://jelastic.com/apaas/) 
