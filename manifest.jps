@@ -9,6 +9,7 @@ description:
 categories:
   - apps/clusters
   - apps/dev-and-admin-tools
+  - apps/microservices
 logo: /images/openfaas-logo.png
 name: OpenFaaS
 targetRegions:
