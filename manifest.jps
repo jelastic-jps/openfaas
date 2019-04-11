@@ -55,7 +55,7 @@ onInstall:
           printf '${globals.user}' | docker secret create basic-auth-user -
           printf '${globals.password}' | docker secret create basic-auth-password -
   - env.control.GetEnvInfo:
-    envName: ${settings.envName}
+      envName: ${settings.envName}
   - setGlobals:
       startPage: http://${response.env.domain}:8080/
 
