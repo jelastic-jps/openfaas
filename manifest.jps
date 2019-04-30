@@ -4,7 +4,7 @@ id: open-faas
 baseUrl: https://github.com/jelastic-jps/openfaas/blob/master
 description:
   text: /text/description.md
-  short: Docker Swarm Cluster with out-of-box auto-clustering and auto-scaling
+  short: OpenFaas (Functions-as-a-Service) - is a framework for building Serverless Functions
 categories:
   - apps/clusters
   - apps/dev-and-admin-tools
