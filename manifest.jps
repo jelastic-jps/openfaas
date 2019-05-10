@@ -12,7 +12,9 @@ logo: /images/openfaas-logo.png
 name: OpenFaaS
 targetRegions:
   type: vz7
-  
+
+requiredFeatures: extip
+
 globals: 
   user: openfaas-${fn.random(1000)}
   password: ${fn.password(20)}
