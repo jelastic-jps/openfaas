@@ -13,6 +13,52 @@ name: OpenFaaS
 targetRegions:
   type: vz7
 
+onBeforeInit: |
+  var install = true, markup = "", cur = null, text = "used";
+  var settings = jps.settings || {fields: []};
+  var fields = settings.fields;
+  var quotas = jelastic.billing.account.GetQuotas('environment.docker.enabled' + ";" + 'enviroment.externalip.enabled' + ";" + 'environment.externalip.maxcount' + ";" + 'environment.externalip.maxcount.per.node' + ";" + 'environment.maxnodescount' + ";" + 'environment.maxsamenodescount').array;
+  for (var i = 0; i < quotas.length; i++){
+    var q = quotas[i], n = toNative(q.quota.name);  
+    if (n == 'environment.docker.enabled' && !q.value){
+      err(q, "required", "1", true);
+      install = false;
+    }
+    if (n == 'environment.externalip.enabled' && !q.value){
+      if (!markup) err(q, "required", "1", true);
+      install = false;
+    }
+    if (n == 'environment.externalip.maxcount' && q.value < 1){
+      if (!markup) err(q, "required", "1", true);
+      install = false;
+    }
+    if (n == 'environment.externalip.maxcount.per.node' && q.value < 1){
+      if (!markup) err(q, "required", "1", true);
+      install = false;
+    }
+    if (n == 'environment.maxnodescount' && q.value < 2){
+      if (!markup) err(q, "required", "2", true);
+      install = false;
+    }
+    if (n == 'environment.maxsamenodescount' && q.value < 1){
+      if (!markup) err(q, "required", "1", true);
+      install = false;
+    } 
+  }
+
+  if (!install) {
+    fields.push(
+        {"type": "compositefield","height": 0,"hideLabel": true,"width": 0,"items": [{"height": 0,"type": "string","required": true}]},
+        {"type": "displayfield","cls": "warning","height": 30,"hideLabel": true,"hidden": false,"markup": markup + " Please upgrade your account."}
+    );
+  }
+  return { result: 0, settings: settings };
+
+  function err(e, text, cur, override){
+    var m = (e.quota.description || e.quota.name) + " - " + e.value + ", " + text + " - " + cur + ". ";
+    if (override) markup = m; else markup += m;
+  }
+
 requiredFeatures: extip
 
 globals: 
