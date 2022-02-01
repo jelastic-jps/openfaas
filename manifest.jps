@@ -83,6 +83,11 @@ settings:
       filter:
         type: ["vz7"]
         isActive: true
+      dependsOn: owner
+        
+    - caption: Owner
+      type: owner
+      name: owner  
  
 onInstall:
   # gettting envGroups via script - temporary workaround while placeholder envGroups is not implemented  
